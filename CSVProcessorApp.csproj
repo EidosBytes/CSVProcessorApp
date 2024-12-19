@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<RootNamespace>_1SouthHouseAccount</RootNamespace>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<ApplicationIcon>rsifavicon.ico</ApplicationIcon>
+		<PackageIcon>rsifavicon.ico</PackageIcon>
+
+		<!-- Enable Single File Output -->
+		<PublishSingleFile>true</PublishSingleFile>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+		<!-- Adjust to win-x86 if targeting 32-bit systems -->
+		<SelfContained>true</SelfContained>
+
+		<!-- Include native libraries in the single file -->
+		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+		<EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+		<TrimUnusedDependencies>false</TrimUnusedDependencies>
+		<!-- Prevent trimming for WPF compatibility -->
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="rsifavicon.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="EPPlus" Version="7.5.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="rsifavicon.ico">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>

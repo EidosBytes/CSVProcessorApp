@@ -1,0 +1,10 @@
+﻿<Window x:Class="CSVProcessorApp.GratuityInputWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Enter Gratuity Percentage" Height="150" Width="300">
+    <Grid>
+        <TextBlock Text="Enter Gratuity Percentage:" VerticalAlignment="Top" Margin="10" />
+        <TextBox x:Name="GratuityPercentageTextBox" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10" />
+        <Button Content="Submit" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="75" Click="OnSubmitClick" />
+    </Grid>
+</Window>
